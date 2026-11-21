@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /home1/
+Disallow: /home2/
+Disallow: /home3/

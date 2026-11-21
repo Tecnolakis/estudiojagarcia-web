@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Estudio García · Contadores Públicos · Monte Maíz</title>
+<meta name="description" content="Estudio García, contadores públicos en Monte Maíz, Córdoba, desde 1969. Contabilidad, impuestos, sueldos, sociedades, auditoría y seguros generales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#F8F5EE;
+    --paper:#FFFDF8;
+    --gold:#A9A27C;
+    --gold-dark:#7A7353;
+    --green:#22372A;
+    --green-2:#2F4B36;
+    --ink:#1C1E1A;
+    --muted:#5C5D55;
+    --hair:#DCD6C4;
+    --serif:"Libre Baskerville", Georgia, serif;
+    --sans:"Source Sans 3", system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:18.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--green);line-height:1.15;font-variant-numeric:lining-nums}
+  .kicker{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark)}
+  .orn{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold)}
+  .orn::before,.orn::after{content:"";height:1px;width:60px;background:var(--gold)}
+  .orn i{width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg)}
+
+  /* Top bar */
+  .topbar{background:var(--green);color:#E6E2D4;font-size:15px}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:20px;height:40px;align-items:center}
+  .topbar a:hover{color:#fff}
+  .topbar span{opacity:.85}
+
+  /* Header */
+  header{background:var(--ivory);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:50}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:104px}
+  .nav ul{display:flex;gap:38px;list-style:none;font-size:15px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  .nav ul.r{justify-content:flex-end}
+  .nav ul a{position:relative;padding:6px 0;color:var(--ink)}
+  .nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
+  .nav ul a:hover::after{transform:scaleX(1)}
+  .logo img{height:78px;width:auto;mix-blend-mode:multiply}
+  .burger{display:none;background:none;border:0;font-size:24px;color:var(--green);cursor:pointer;justify-self:end}
+  .mnav{display:none}
+
+  /* Hero */
+  .hero{text-align:center;padding:120px 0 0}
+  .hero .kicker{margin-bottom:34px;display:block}
+  .hero h1{font-size:clamp(36px,5vw,62px);line-height:1.25;max-width:980px;margin:0 auto}
+  .hero h1 em{font-style:italic;color:var(--gold-dark)}
+  .hero p{max-width:640px;margin:34px auto 0;color:var(--muted);font-size:20px}
+  .hero .orn{margin:46px 0}
+  .btns{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:17px 34px;font-size:15px;letter-spacing:.08em;font-weight:600;text-transform:uppercase;font-weight:500;transition:all .3s;border:1px solid var(--green)}
+  .btn-dark{background:var(--green);color:var(--ivory)}
+  .btn-dark:hover{background:var(--green-2)}
+  .btn-line{color:var(--green)}
+  .btn-line:hover{background:var(--green);color:var(--ivory)}
+
+  .figures{margin-top:110px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--paper)}
+  .figures .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+  .fig{text-align:center;padding:52px 20px}
+  .fig + .fig{border-left:1px solid var(--hair)}
+  .fig b{display:block;font-family:var(--serif);font-weight:700;font-size:52px;line-height:1;color:var(--green);font-variant-numeric:lining-nums}
+  .fig b small{font-size:1em;color:var(--green)}
+  .fig span{display:block;margin-top:14px;font-size:14px;letter-spacing:.12em;font-weight:600;text-transform:uppercase;color:var(--gold-dark);font-weight:500}
+
+  /* Sections */
+  section{padding:130px 0}
+  .title{text-align:center;max-width:720px;margin:0 auto 80px}
+  .title h2{font-size:clamp(30px,3.6vw,44px);line-height:1.3;margin:20px 0 22px}
+  .title p{color:var(--muted)}
+
+  /* Services: editorial index */
+  .index{display:grid;grid-template-columns:1fr 1fr;column-gap:90px}
+  .item{display:grid;grid-template-columns:64px 1fr;padding:34px 0;border-top:1px solid var(--hair)}
+  .item:nth-last-child(-n+2){border-bottom:1px solid var(--hair)}
+  .item .n{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--gold-dark);line-height:1.4}
+  .item h3{font-size:23px;margin-bottom:8px}
+  .item p{color:var(--muted);font-size:17.5px}
+  .item.feature{grid-column:1/-1;background:var(--green);color:#D9D5C6;padding:46px 52px;margin-top:60px;border:0;grid-template-columns:90px 1fr auto;align-items:center;gap:20px}
+  .item.feature .n{color:var(--gold);font-size:30px}
+  .item.feature h3{color:#fff;font-size:28px}
+  .item.feature p{color:#C9C5B4;max-width:640px}
+  .item.feature .btn{border-color:var(--gold);color:#fff}
+  .item.feature .btn:hover{background:var(--gold);color:var(--green)}
+
+  /* Trayectoria */
+  .story{background:var(--paper);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:100px;align-items:center}
+  .year{font-family:var(--serif);font-size:clamp(90px,12vw,170px);line-height:.85;color:var(--gold);opacity:.55;font-weight:700;font-variant-numeric:lining-nums;text-align:center}
+  .year-cap{text-align:center;margin-top:26px}
+  .year-cap b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--green)}
+  .year-cap span{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dark)}
+  .story h2{font-size:clamp(30px,3.4vw,42px);line-height:1.3;margin:18px 0 28px}
+  .story p{color:var(--muted);margin-bottom:18px}
+  .story blockquote{margin-top:34px;padding-top:30px;border-top:1px solid var(--hair);font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.6;color:var(--green)}
+
+  /* Valores */
+  .values{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .val{padding:10px 34px;text-align:center}
+  .val + .val{border-left:1px solid var(--hair)}
+  .val .orn{margin-bottom:22px}
+  .val .orn::before,.val .orn::after{width:18px}
+  .val h3{font-size:20px;margin-bottom:10px}
+  .val p{color:var(--muted);font-size:17px}
+
+  /* Contacto */
+  .contact{padding:0}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;min-height:620px}
+  .c-left{background:var(--green);color:#D9D5C6;padding:110px 80px}
+  .c-left .kicker{color:var(--gold)}
+  .c-left h2{color:#fff;font-size:clamp(30px,3.4vw,42px);margin:20px 0 46px}
+  .c-row{display:grid;grid-template-columns:130px 1fr;font-size:19px;gap:20px;padding:20px 0;border-top:1px solid rgba(255,255,255,.14)}
+  .c-row small{font-size:13px;letter-spacing:.1em;font-weight:600;text-transform:uppercase;color:var(--gold);padding-top:5px;font-weight:500}
+  .c-row a:hover{color:#fff}
+  .c-left .btns{justify-content:flex-start;margin-top:44px}
+  .c-left .btn-dark{background:var(--gold);border-color:var(--gold);color:var(--green)}
+  .c-left .btn-dark:hover{background:#BDB690}
+  .c-left .btn-line{border-color:rgba(255,255,255,.4);color:#fff}
+  .c-left .btn-line:hover{background:rgba(255,255,255,.08)}
+  .c-map{position:relative;background:#E9E5DA}
+  .c-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) sepia(.25) contrast(.95)}
+
+  footer{background:var(--ivory);text-align:center;padding:60px 0 50px;border-top:1px solid var(--hair)}
+  footer img{height:64px;margin:0 auto 22px;mix-blend-mode:multiply}
+  footer p{font-size:15px;color:var(--muted)}
+  footer p + p{margin-top:4px}
+
+  .wa{position:fixed;right:24px;bottom:24px;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 25px rgba(0,0,0,.18);z-index:60}
+  .wa svg{width:28px;height:28px;fill:#fff}
+
+  .rv{opacity:0;transform:translateY(16px);transition:opacity 1s ease,transform 1s ease}
+  .rv.on{opacity:1;transform:none}
+
+  @media (max-width:980px){
+    .nav{grid-template-columns:auto 1fr;height:84px}
+    .nav ul{display:none}
+    .logo img{height:58px}
+    .burger{display:block}
+    .mnav.open{display:flex;flex-direction:column;gap:18px;padding:24px 32px;border-top:1px solid var(--hair);font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+    .index{grid-template-columns:1fr}
+    .item:nth-last-child(-n+2){border-bottom:0}
+    .item.feature{grid-template-columns:1fr;padding:40px 32px}
+    .story-grid,.contact-grid{grid-template-columns:1fr;gap:60px}
+    .values{grid-template-columns:1fr 1fr;row-gap:50px}
+    .val:nth-child(3){border-left:0}
+    .c-left{padding:80px 32px}
+    .c-map{min-height:380px}
+  }
+  @media (max-width:600px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .topbar .hide-m{display:none}
+    .topbar .wrap{justify-content:center}
+    .hero{padding:80px 0 0}
+    section{padding:90px 0}
+    .figures .wrap{grid-template-columns:1fr}
+    .fig + .fig{border-left:0;border-top:1px solid var(--hair)}
+    .fig{padding:36px 0}
+    .values{grid-template-columns:1fr}
+    .val + .val{border-left:0}
+    .c-left{padding:70px 16px}
+    .c-row{grid-template-columns:1fr;gap:4px}
+    .item{grid-template-columns:44px 1fr}
+    .btn{padding:16px 26px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="hide-m">9 de Julio 1482 · Monte Maíz, Córdoba</span>
+    <span><a href="tel:+543468471616">(03468) 471616</a> &nbsp;·&nbsp; <span class="hide-m">Lun a Vie 8:00–12:30 · 14:30–18:00</span></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#trayectoria">Trayectoria</a></li>
+    </ul>
+    <a class="logo" href="#inicio"><img src="../img/logo.png" alt="Estudio García · Contadores Públicos"></a>
+    <ul class="r">
+      <li><a href="#valores">Valores</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="burger" aria-label="Menú" onclick="document.querySelector('.mnav').classList.toggle('open')">☰</button>
+  </div>
+  <nav class="mnav">
+    <a href="#servicios">Servicios</a><a href="#trayectoria">Trayectoria</a><a href="#valores">Valores</a><a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap rv">
+      <span class="kicker">Contadores Públicos · Desde 1969</span>
+      <h1>Más de medio siglo cuidando <em>lo que usted construye</em></h1>
+      <p>Asesoramiento contable, impositivo y laboral para empresas, productores, profesionales y familias de Monte Maíz y la región.</p>
+      <div class="orn"><i></i></div>
+      <div class="btns">
+        <a class="btn btn-dark" href="#contacto">Solicitar una consulta</a>
+        <a class="btn btn-line" href="#servicios">Nuestros servicios</a>
+      </div>
+    </div>
+    <div class="figures rv">
+      <div class="wrap">
+        <div class="fig"><b>1969</b><span>Año de fundación</span></div>
+        <div class="fig"><b><small>+</small>200</b><span>Clientes activos</span></div>
+        <div class="fig"><b><small>+</small>10</b><span>Profesionales</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="title rv">
+        <span class="kicker">Servicios</span>
+        <h2>Un solo estudio para todo lo que su empresa necesita</h2>
+        <div class="orn"><i></i></div>
+      </div>
+      <div class="index rv">
+        <div class="item"><span class="n">1</span><div><h3>Contabilidad</h3><p>Registración contable, balances y estados contables, certificaciones e informes.</p></div></div>
+        <div class="item"><span class="n">2</span><div><h3>Impuestos</h3><p>Impuestos nacionales, provinciales y municipales. Monotributo, IVA, Ganancias y Bienes Personales.</p></div></div>
+        <div class="item"><span class="n">3</span><div><h3>Sueldos y cargas sociales</h3><p>Liquidación de haberes, F.931, altas y bajas, convenios colectivos y asesoramiento laboral.</p></div></div>
+        <div class="item"><span class="n">4</span><div><h3>Sociedades</h3><p>Constitución de sociedades, trámites ante organismos de control, actas y libros societarios.</p></div></div>
+        <div class="item"><span class="n">5</span><div><h3>Asesoramiento PyME</h3><p>Planificación fiscal, análisis de costos y acompañamiento en la toma de decisiones.</p></div></div>
+        <div class="item"><span class="n">6</span><div><h3>Auditoría</h3><p>Auditoría de estados contables e informes especiales con independencia y rigor profesional.</p></div></div>
+        <div class="item feature">
+          <span class="n">7</span>
+          <div><h3>Seguros Generales</h3><p>Asesoramiento y gestión de seguros para su empresa, su hogar, su vehículo y su actividad. Comparamos opciones y lo acompañamos también ante un siniestro.</p></div>
+          <a class="btn" href="#contacto">Consultar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA -->
+  <section id="trayectoria" class="story">
+    <div class="wrap story-grid">
+      <div class="rv">
+        <div class="year">1969</div>
+        <div class="year-cap"><b>Cr. José Alberto García</b><span>Contador Público Nacional · M.P. 1001515-9</span></div>
+      </div>
+      <div class="rv">
+        <span class="kicker">Trayectoria</span>
+        <h2>Una historia construida sobre la confianza</h2>
+        <p>En 1969 el Contador Público Nacional José Alberto García fundó el estudio en Monte Maíz con una convicción: ofrecer un servicio profesional de excelencia, con trato personal y compromiso con cada cliente.</p>
+        <p>Más de cinco décadas después, un equipo de más de 10 profesionales acompaña a más de 200 clientes activos, uniendo la experiencia de toda una trayectoria con las herramientas de hoy.</p>
+        <blockquote>“Detrás de cada número hay una persona, una familia o una empresa que confía en nosotros.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section id="valores">
+    <div class="wrap">
+      <div class="title rv">
+        <span class="kicker">Nuestros valores</span>
+        <h2>Lo que nos distingue</h2>
+      </div>
+      <div class="values rv">
+        <div class="val"><div class="orn"><i></i></div><h3>Confidencialidad</h3><p>Su información se trata con absoluta reserva.</p></div>
+        <div class="val"><div class="orn"><i></i></div><h3>Trato personal</h3><p>Un profesional que conoce su caso y le responde directamente.</p></div>
+        <div class="val"><div class="orn"><i></i></div><h3>Actualización</h3><p>Al día con cada cambio normativo, para evitarle sorpresas.</p></div>
+        <div class="val"><div class="orn"><i></i></div><h3>Puntualidad</h3><p>Vencimientos controlados y presentaciones en tiempo y forma.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="contact-grid">
+      <div class="c-left rv">
+        <span class="kicker">Contacto</span>
+        <h2>Será un gusto atenderlo</h2>
+        <div class="c-row"><small>Dirección</small><a href="https://www.google.com/maps/search/?api=1&query=9+de+Julio+1482,+Monte+Ma%C3%ADz,+C%C3%B3rdoba" target="_blank" rel="noopener">9 de Julio 1482 · X2659AEJ<br>Monte Maíz, Córdoba</a></div>
+        <div class="c-row"><small>Teléfono</small><a href="tel:+543468471616">(03468) 471616</a></div>
+        <div class="c-row"><small>WhatsApp</small><a href="https://wa.me/5493468544548?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20Estudio%20Garc%C3%ADa." target="_blank" rel="noopener">3468 544548</a></div>
+        <div class="c-row"><small>Email</small><a href="mailto:info@estudiojagarcia.com.ar">info@estudiojagarcia.com.ar</a></div>
+        <div class="c-row"><small>Horario</small><span>Lunes a viernes<br>8:00 a 12:30 · 14:30 a 18:00 h</span></div>
+        <div class="btns">
+          <a class="btn btn-dark" href="https://wa.me/5493468544548?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20Estudio%20Garc%C3%ADa." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-line" href="mailto:info@estudiojagarcia.com.ar">Enviar email</a>
+        </div>
+      </div>
+      <div class="c-map">
+        <iframe title="Ubicación de Estudio García" loading="lazy" src="https://maps.google.com/maps?q=9%20de%20Julio%201482%2C%20Monte%20Ma%C3%ADz%2C%20C%C3%B3rdoba%2C%20Argentina&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="../img/logo.png" alt="Estudio García">
+  <p>Cr. José Alberto García · Contador Público Nacional · M.P. 1001515-9</p>
+  <p>© 2026 Estudio García · Monte Maíz, Córdoba</p>
+</footer>
+
+<a class="wa" href="https://wa.me/5493468544548?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20Estudio%20Garc%C3%ADa." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.1});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  setTimeout(() => document.querySelectorAll('.rv').forEach(el => el.classList.add('on')), 1500);
+  document.querySelectorAll('.mnav a').forEach(a => a.addEventListener('click', () => document.querySelector('.mnav').classList.remove('open')));
+</script>
+</body>
+</html>

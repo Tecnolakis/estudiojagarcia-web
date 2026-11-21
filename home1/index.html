@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Estudio García · Contadores Públicos</title>
+<meta name="description" content="Estudio García, contadores públicos. Contabilidad, impuestos, sueldos y asesoramiento para empresas y particulares.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFAF6;
+    --paper:#FFFFFF;
+    --sand:#F2EFE6;
+    --khaki:#A9A27C;
+    --khaki-dark:#7E7756;
+    --green:#2F4B36;
+    --green-dark:#22372A;
+    --ink:#1F211D;
+    --muted:#5E615A;
+    --line:#E4E0D3;
+    --serif:"Cormorant Garamond", Georgia, serif;
+    --sans:"Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .todo{background:#FFF4C2;border-bottom:1px dashed #C9A400;padding:0 3px;border-radius:2px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .nav img{height:68px;width:auto}
+  .nav ul{display:flex;gap:34px;list-style:none;align-items:center}
+  .nav ul a{font-size:15px;font-weight:500;color:var(--muted);transition:color .2s}
+  .nav ul a:hover{color:var(--green)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:4px;font-weight:600;font-size:15px;transition:all .2s;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-primary:hover{background:var(--green-dark)}
+  .btn-ghost{border-color:var(--khaki);color:var(--green)}
+  .btn-ghost:hover{background:var(--sand)}
+  .nav .btn{padding:10px 18px;color:#fff}
+  .burger{display:none;background:none;border:0;font-size:26px;color:var(--green);cursor:pointer}
+
+  /* Hero */
+  .hero{padding:110px 0 100px;background:
+      radial-gradient(1200px 500px at 85% -10%, rgba(169,162,124,.18), transparent 60%),
+      linear-gradient(180deg,#fff 0%, var(--bg) 100%);}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+  .eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--khaki-dark);font-weight:600;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--khaki)}
+  h1,h2,h3{font-variant-numeric:lining-nums;font-family:var(--serif);font-weight:600;color:var(--green-dark);line-height:1.12}
+  h1{font-size:clamp(42px,5.4vw,66px);margin:22px 0 24px}
+  h1 em{font-style:italic;color:var(--khaki-dark);font-weight:500}
+  .lead{font-size:19px;color:var(--muted);max-width:560px}
+  .cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .hero-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:40px 36px;box-shadow:0 30px 60px -30px rgba(34,55,42,.25)}
+  .stat{padding:18px 0;border-bottom:1px solid var(--line)}
+  .stat:last-child{border-bottom:0;padding-bottom:0}
+  .stat:first-child{padding-top:0}
+  .stat b{display:block;font-family:var(--sans);font-size:40px;color:var(--green);font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:lining-nums tabular-nums;margin-bottom:4px}
+  .stat > span{font-size:14px;color:var(--muted)}
+
+  /* Sections */
+  section{padding:100px 0}
+  .head{max-width:640px;margin-bottom:56px}
+  .head h2{font-size:clamp(34px,4vw,46px);margin:16px 0 14px}
+  .head p{color:var(--muted)}
+  .alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .svc{background:var(--paper);padding:38px 34px;transition:background .25s}
+  .svc:hover{background:#FDFCF8}
+  .svc svg{width:34px;height:34px;stroke:var(--khaki-dark);fill:none;stroke-width:1.4;margin-bottom:20px}
+  .svc h3{font-size:26px;margin-bottom:10px}
+  .svc p{font-size:15.5px;color:var(--muted)}
+  .svc-wide{grid-column:1/-1;display:flex;gap:28px;align-items:flex-start;background:var(--sand)}
+  .svc-wide:hover{background:#EEEADF}
+  .svc-wide svg{flex:none;margin:6px 0 0}
+  .svc-wide p{max-width:720px}
+
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+  .about p{color:var(--muted);margin-bottom:18px}
+  .quote{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1.35;color:var(--green);border-left:2px solid var(--khaki);padding-left:28px;margin-top:10px}
+  .values{display:grid;gap:22px;margin-top:8px}
+  .value{display:flex;gap:18px}
+  .value i{flex:none;width:44px;height:44px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--green);font-style:normal;font-family:var(--serif);font-size:20px;font-weight:700}
+  .value h4{font-size:16px;font-weight:600;margin-bottom:2px}
+  .value p{margin:0;font-size:15px}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+  .step{border-top:1px solid var(--khaki);padding-top:26px}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:20px;color:var(--khaki-dark);font-weight:600}
+  .step h3{font-size:26px;margin:8px 0 8px}
+  .step p{color:var(--muted);font-size:15.5px}
+
+  .contact{background:var(--green-dark);color:#E9E6DA}
+  .contact .head h2{color:#fff}
+  .contact .head p{color:#C9C5B4}
+  .contact .eyebrow{color:var(--khaki)}
+  .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+  .c-item{border-top:1px solid rgba(255,255,255,.15);padding-top:22px}
+  .c-item small{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki);margin-bottom:8px;font-weight:600}
+  .c-item a:hover{color:#fff;text-decoration:underline}
+  .contact .todo{color:var(--ink)}
+  .contact .cta{margin-top:50px}
+  .contact .btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
+  .contact .btn-ghost:hover{background:rgba(255,255,255,.08)}
+  .contact .btn-primary{background:var(--khaki);color:var(--green-dark)}
+  .contact .btn-primary:hover{background:#BDB690}
+
+  footer{background:#1A2A20;color:#9FA294;font-size:14px;padding:30px 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+  .wa{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 25px rgba(0,0,0,.2);z-index:60}
+  .wa svg{width:28px;height:28px;fill:#fff}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.on{opacity:1;transform:none}
+
+  @media (max-width:960px){
+    .hero-grid,.about{grid-template-columns:1fr;gap:50px}
+    .services{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr 1fr}
+    .nav ul{display:none;position:absolute;top:84px;left:0;right:0;background:#fff;flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid var(--line)}
+    .nav ul.open{display:flex}
+    .burger{display:block}
+  }
+  @media (max-width:600px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .nav{height:72px}.nav img{height:46px}
+    .nav ul{top:72px}
+    .hero{padding:70px 0}
+    section{padding:72px 0}
+    .services,.contact-grid{grid-template-columns:1fr}
+    .hero-card{padding:30px 26px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio"><img src="../img/logo.png" alt="Estudio García · Contadores Públicos"></a>
+    <button class="burger" aria-label="Menú" onclick="document.querySelector('.nav ul').classList.toggle('open')">☰</button>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#estudio">El Estudio</a></li>
+      <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+      <li><a class="btn btn-primary" href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">Contadores Públicos · Monte Maíz, Córdoba</div>
+        <h1>Sus números en manos <em>expertas</em>, su tranquilidad asegurada.</h1>
+        <p class="lead">Desde 1969 acompañamos a empresas, profesionales y familias con asesoramiento contable, impositivo y laboral serio, cercano y a tiempo.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contacto">Solicitar una consulta</a>
+          <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="stat"><b>+55</b><span>años de trayectoria · desde 1969</span></div>
+        <div class="stat"><b>+200</b><span>clientes activos que confían en nosotros</span></div>
+        <div class="stat"><b>+10</b><span>profesionales a su servicio</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="alt">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="eyebrow">Servicios</div>
+        <h2>Todo lo que su empresa necesita, en un solo estudio</h2>
+        <p>Soluciones integrales para que usted se dedique a lo suyo, con la certeza de que lo contable está en orden.</p>
+      </div>
+      <div class="services reveal">
+        <div class="svc">
+          <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+          <h3>Contabilidad</h3>
+          <p>Registración contable, balances y estados contables, certificaciones e informes.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6"/></svg>
+          <h3>Impuestos</h3>
+          <p>Liquidación de impuestos nacionales, provinciales y municipales. Monotributo, IVA, Ganancias y Bienes Personales.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 4.5a3.2 3.2 0 0 1 0 6.3M21 20c0-2.7-1.7-5-4-5.7"/></svg>
+          <h3>Sueldos y cargas sociales</h3>
+          <p>Liquidación de haberes, F.931, altas y bajas, convenios colectivos y asesoramiento laboral.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14M9 21v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/></svg>
+          <h3>Sociedades</h3>
+          <p>Constitución de sociedades, trámites ante organismos de control, actas y libros societarios.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-8M15 8h5v5"/></svg>
+          <h3>Asesoramiento PyME</h3>
+          <p>Planificación fiscal, análisis de costos y acompañamiento en la toma de decisiones.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          <h3>Auditoría</h3>
+          <p>Auditoría de estados contables e informes especiales con independencia y rigor profesional.</p>
+        </div>
+        <div class="svc svc-wide">
+          <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0H3z"/><path d="M12 12v6.5a2 2 0 0 1-4 0M12 3v0"/></svg>
+          <div>
+            <h3>Seguros Generales</h3>
+            <p>Asesoramiento y gestión de seguros para su empresa, su hogar, su vehículo y su actividad. Comparamos opciones y lo acompañamos también ante un siniestro, con el mismo compromiso que en lo contable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EL ESTUDIO -->
+  <section id="estudio">
+    <div class="wrap about">
+      <div class="reveal">
+        <div class="eyebrow">El Estudio</div>
+        <h2 style="font-size:clamp(34px,4vw,46px);margin:16px 0 24px">Una trayectoria construida sobre la confianza</h2>
+        <p>Estudio García fue fundado en 1969 en Monte Maíz por el Contador Público Nacional <strong>José Alberto García</strong> (<span style="white-space:nowrap">M.P. 1001515-9</span>), con una idea simple: brindar un servicio profesional de excelencia, con trato personal y compromiso con cada cliente.</p>
+        <p>Hoy, con un equipo de más de 10 profesionales y más de 200 clientes activos, seguimos combinando la experiencia de décadas con herramientas actuales para que cada cliente reciba respuestas claras y a tiempo.</p>
+        <p class="quote">“Detrás de cada número hay una persona, una familia o una empresa que confía en nosotros.”</p>
+      </div>
+      <div class="values reveal">
+        <div class="value"><i>1</i><div><h4>Confidencialidad</h4><p>Su información está protegida y se trata con absoluta reserva.</p></div></div>
+        <div class="value"><i>2</i><div><h4>Trato personal</h4><p>Un profesional responsable que conoce su caso y le responde directamente.</p></div></div>
+        <div class="value"><i>3</i><div><h4>Actualización permanente</h4><p>Al día con cada cambio normativo para anticiparnos y evitarle sorpresas.</p></div></div>
+        <div class="value"><i>4</i><div><h4>Puntualidad</h4><p>Vencimientos controlados y presentaciones en tiempo y forma.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJAMOS -->
+  <section id="como-trabajamos" class="alt">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="eyebrow">Cómo trabajamos</div>
+        <h2>Simple, claro y sin sorpresas</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step"><h3>Conversamos</h3><p>Una primera reunión para conocer su situación, sus necesidades y sus objetivos.</p></div>
+        <div class="step"><h3>Ordenamos</h3><p>Revisamos su situación contable e impositiva y le proponemos un plan de trabajo a medida.</p></div>
+        <div class="step"><h3>Acompañamos</h3><p>Nos ocupamos de los vencimientos y le mantenemos informado mes a mes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="eyebrow">Contacto</div>
+        <h2>Conversemos sobre su caso</h2>
+        <p>Escríbanos o acérquese al estudio. Le respondemos a la brevedad.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="c-item"><small>Dirección</small><a href="https://www.google.com/maps/search/?api=1&query=9+de+Julio+1482,+Monte+Ma%C3%ADz,+C%C3%B3rdoba" target="_blank" rel="noopener">9 de Julio 1482<br>X2659AEJ · Monte Maíz<br>Córdoba</a></div>
+        <div class="c-item"><small>Teléfono</small><a href="tel:+543468471616">(03468) 471616</a><br><a href="https://wa.me/5493468544548?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20Estudio%20Garc%C3%ADa." target="_blank" rel="noopener">WhatsApp 3468 544548</a></div>
+        <div class="c-item"><small>Email</small><a href="mailto:info@estudiojagarcia.com.ar">info@estudiojagarcia.com.ar</a></div>
+        <div class="c-item"><small>Horario</small>Lunes a viernes<br>8:00 a 12:30 h<br>14:30 a 18:00 h</div>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://wa.me/5493468544548?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20Estudio%20Garc%C3%ADa." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:info@estudiojagarcia.com.ar">Enviar un email</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Estudio García · Contadores Públicos</span>
+    <span>Cr. José Alberto García · Contador Público Nacional · M.P. 1001515-9</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5493468544548?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20Estudio%20Garc%C3%ADa." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('on')), 1500);
+  document.querySelectorAll('.nav ul a').forEach(a => a.addEventListener('click', () => document.querySelector('.nav ul').classList.remove('open')));
+</script>
+</body>
+</html>
